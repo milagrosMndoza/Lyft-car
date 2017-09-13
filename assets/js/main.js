@@ -4,6 +4,7 @@ const app3 = {
     map: undefined,
     markerOrigin: undefined,
     detailLocationOrigin: undefined,
+    price_stimated:undefined,
 
     init: function () {
         app3.map = new google.maps.Map(document.getElementById("map"), {
@@ -159,6 +160,8 @@ const app3 = {
                 function (response, status) {
                     if (status === "OK") {
                         directionsDisplay.setDirections(response);
+                        var price_stimated = response.routes[0].overview_path.length / 10  + 'USD';
+                        
                     } else {
                         app3.errorRoute();
                     }
