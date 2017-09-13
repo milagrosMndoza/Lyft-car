@@ -1,12 +1,12 @@
 'use strict';
 
-const app = {
+const app3 = {   
     map: undefined,
     markerOrigin: undefined,
     detailLocationOrigin: undefined,
 
     init: function () {
-        app.map = new google.maps.Map(document.getElementById("map"), {
+        app3.map = new google.maps.Map(document.getElementById("map"), {
             zoom: 10,
             center: {
                 lat: -33.4724728,
@@ -19,28 +19,29 @@ const app = {
 
         let inputOrigin = document.getElementById('origen');
         let autocompleteOrigin = new google.maps.places.Autocomplete(inputOrigin);
-        autocompleteOrigin.bindTo('bounds', app.map);
-        app.detailLocationOrigin = new google.maps.InfoWindow();
-        app.markerOrigin = app.createMarker(app.map);
-        app.createListener(autocompleteOrigin, app.detailLocationOrigin, app.markerOrigin);
+        autocompleteOrigin.bindTo('bounds', app3.map);
+        app3.detailLocationOrigin = new google.maps.InfoWindow();
+        app3.markerOrigin = app3.createMarker(app3.map);
+        app3.createListener(autocompleteOrigin, app3.detailLocationOrigin, app3.markerOrigin);
         let inputDestinity = document.getElementById('destino');
         let autocompleteDestinity = new google.maps.places.Autocomplete(inputDestinity);
-        autocompleteDestinity.bindTo('bounds', app.map);
+        autocompleteDestinity.bindTo('bounds', app3.map);
         let detailLocationDestination = new google.maps.InfoWindow();
-        let markerDestinity = app.createMarker(app.map);
+        let markerDestinity = app3.createMarker2(app3.map);
 
-        app.createListener(autocompleteDestinity, detailLocationDestination, markerDestinity);
+        app3.createListener(autocompleteDestinity, detailLocationDestination, markerDestinity);
         /* Mi ubicación actual */
-        document.getElementById("encuentrame").addEventListener("click", app.buscarMiUbicacion);
+        app3.searchMyUbication();
+       // document.getElementById("encuentrame").addEventListener("click", app3.searchMyUbication);
         /* Ruta */
         let directionsService = new google.maps.DirectionsService;
         let directionsDisplay = new google.maps.DirectionsRenderer;
 
         document.getElementById("ruta").addEventListener("click", function () {
-            app.drawRoute(directionsService, directionsDisplay)
+            app3.drawRoute(directionsService, directionsDisplay)
         });
 
-        directionsDisplay.setMap(app.map);
+        directionsDisplay.setMap(app3.map);
     },
 
     createListener: function (autocomplete, detailUbication, marker) {
@@ -48,13 +49,13 @@ const app = {
             detailUbication.close();
             marker.setVisible(false);
             let place = autocomplete.getPlace();
-            app.marcarUbicacion(place, detailUbication, marker);
+            app3.marcarUbicacion(place, detailUbication, marker);
         });
     },
 
-    buscarMiUbicacion: function () {
+    searchMyUbication: function () {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(app.markAutomaticLocation, app.funcionError);
+            navigator.geolocation.getCurrentPosition(app3.markAutomaticLocation, app3.funcionError);
         }
     },
 
@@ -67,15 +68,15 @@ const app = {
         latitud = posicion.coords.latitude;
         longitud = posicion.coords.longitude;
 
-        app.markerOrigin.setPosition(new google.maps.LatLng(latitud, longitud));
-        app.map.setCenter({
+        app3.markerOrigin.setPosition(new google.maps.LatLng(latitud, longitud));
+        app3.map.setCenter({
             lat: latitud,
             lng: longitud
         });
-        app.map.setZoom(17);
-        app.markerOrigin.setVisible(true);
-        app.detailLocationOrigin.setContent('<div><strong>Mi ubicación actual</strong><br>');
-        app.detailLocationOrigin.open(app.map, app.markerOrigin);
+        app3.map.setZoom(17);
+        app3.markerOrigin.setVisible(true);
+        app3.detailLocationOrigin.setContent('<div><strong>Mi ubicación actual</strong><br>');
+        app3.detailLocationOrigin.open(app3.map, app3.markerOrigin);
     },
 
     marcarUbicacion: function (place, detailUbication, marker) {
@@ -86,10 +87,10 @@ const app = {
         }
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
-            app.map.fitBounds(place.geometry.viewport);
+            app3.map.fitBounds(place.geometry.viewport);
         } else {
-            app.map.setCenter(place.geometry.location);
-            app.map.setZoom(17);
+            app3.map.setCenter(place.geometry.location);
+            app3.map.setZoom(17);
         }
 
         marker.setPosition(place.geometry.location);
@@ -105,12 +106,30 @@ const app = {
         }
 
         detailUbication.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-        detailUbication.open(app.map, marker);
+        detailUbication.open(app3.map, marker);
     },
 
     createMarker: function (map) {
         let icono = {
-            url: 'http://icons.iconarchive.com/icons/aha-soft/travel/256/taxi-icon.png',
+            url: 'assets/img/user.png',
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(35, 35)
+        };
+
+        let marker = new google.maps.Marker({
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: icono,
+            anchorPoint: new google.maps.Point(0, -29)
+        });
+
+        return marker;
+    },
+    createMarker2: function (map) {
+        let icono = {
+            url: 'https://ameriflex-production.imgix.net/df8bf8158e43d6eb4aa758b7a39a68e4.png',
             size: new google.maps.Size(71, 71),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(17, 34),
@@ -141,7 +160,7 @@ const app = {
                     if (status === "OK") {
                         directionsDisplay.setDirections(response);
                     } else {
-                        app.errorRoute();
+                        app3.errorRoute();
                     }
                 });
         }
@@ -154,5 +173,5 @@ const app = {
 }
 
 function initMap() {
-    app.init();
+    app3.init();
 }
