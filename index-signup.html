@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>SIGN-UP</title>
+ 	<!--Alertify js-->
+ 	<script src="assets/js/alertify.min.js"></script>
+ 	<!-- Alertify Styles -->
+ 	<link href="assets/css/alertify.core.css" rel="stylesheet">
+ 	<link href="assets/css/alertify.default.css" rel="stylesheet">
+ <!--zoom desde mobile-->
+  <!-- CSS enlaces -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body>
+	<div class="container">
+		<div id="app-content">
+			<header>
+				<div class="row">
+					<div class="col-md-1 col-sm-1 col-xs-1">
+						<a href="index.html" class="goback" id="#btnGoBack"><i class="fa fa-angle-left fa-3x" style="margin-top: 18px" aria-hidden="true"></i></a>
+					</div>
+			        <div class="col-md-9 col-sm-9 col-xs-9 text-center title">
+				        <h1>Sign up</h1>
+				        <p>Join now for free ride credit</p>
+	       			</div>
+	        		<hr>
+  				</div>
+			</header>
+			<section>
+				<div class="container">
+					<div class="row">
+						
+					        <div class="">
+					       		<!-- Nombre y apellido input -->	
+                            	<div class="form-group col-md-12" id="input-name-group">
+	                            	<div class="input-group">
+	                            		<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+	                                    <input  id="commentName" name="name" type="text" required class="form-control" placeholder="First Name">
+	                            	
+		                            	<span class="input-group-addon spanLastName"></span>
+	                                    <input id="commentLastName" name="lastname" type="text"  class="form-control" required placeholder="Last Name">
+	                            	</div>
+                                </div>
+                                <!-- Mensajes para nombre y apellido input--> 
+                                <span class="help-block" id="commentNamePrompt" style="display: inline; padding-right:30px;"></span>
+                                <span class="help-block" id="commentLastNamePrompt" style="display: inline"></span>
+                                <br>
+                                <!-- Email input -->
+                                <div class="form-group col-md-12" id="input-email-group">
+                                	<div class="input-group">
+	                                    <div class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+	                                    </div>
+	                                    <input id="commentEmail" name="email" type="text" class="form-control" required placeholder="Email">
+                                	</div>
+                                </div>
+                                
+                                <!-- Mensajes para email input--> 
+                                <span class="help-block" id="commentEmailPrompt"></span>
+					        </div>
+					       <!-- Mensaje de boton Next -->
+					        <div class="form-group">
+					        	<div id="commentPrompt" class="alert">
+					      		</div>
+					        </div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<div class="row ">
+						<div class="col-md-10 col-xs-offset-1 text-center">
+                            <div class="checkbox">
+                                <input type="checkbox" name="checkbox" id="commentInfo"> I agree to Lyft's <span style="color:#40A9DD"> Terms of Service</span>
+                            </div>
+                            <span id="commentInfoPrompt"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<footer>
+				<div class="container">
+					<div class="row">
+				        <div class="col-md-12 text-center">
+							<button type="button" class="btn-login" id="btnValidation" >Next</button>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="assets/js/signup.js"></script>
+</body>
+</html>

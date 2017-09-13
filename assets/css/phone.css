@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=El+Messiri:600,700');
+
+header p{
+	font-size: 20px;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+.title {
+	margin-left:20px;
+}
+.goback {
+	text-decoration: none; 
+	color: black;
+}
+
+.goback span{
+	margin-top: 20px;
+	font-size:40px;
+	color: black;
+}
+
+hr {
+	width: 100%;
+}
+section {
+	margin: 0 auto;
+}
+
+/*botón bandera*/
+.flag-btn{
+	padding: 0px 12px;
+}
+
+.flag {
+	padding-right: -55px;
+}
+/*Codigo de pais*/
+#dialCode {
+    background-color: white;
+    border-right: none;
+}
+/*Número ingresado*/
+.input-phone {
+	border-left: none;
+}
+
+/*Section Botón*/
+footer .btnNext {
+	background-color: #EA0B8C;
+}
+
+section a {
+	text-decoration: none;
+	font-size: 30px;
+}
+footer {
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}
+
+/*Cuadro modal style*/
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    color: fuchsia;
+}
+.modal-body {
+    position: relative;
+	padding: 15px;
+	font-weight: bold;
+    color: #c10afb;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ef81d7;
+}
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #ef81d7;
+}
+
+.close {
+   
+	opacity: .9; 
+	color: #EC0243;
+}
+
+/*alertify style*/
+.alertify {
+    background: #FFF;
+    border: 10px solid #ea1111;
+	border: 10px solid #EC0243;
+}
+.alertify-button-ok, .alertify-button-ok:hover, .alertify-button-ok:focus {
+    background-color: #EC0243;
+    border: 1px solid rgba(245, 4, 71, 0.81);
+}
+p.alertify-message {
+	margin: 0 0 10px;
+	color: #ea1111;
+	font-family: 'El Messiri', sans-serif;
+	font-size: 25px;
+}

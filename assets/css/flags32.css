@@ -1,0 +1,20 @@
+  .f32 .flag {
+      display: inline-block;
+      height: 32px;
+      width: 40px;
+      vertical-align: middle;
+      line-height: 32px;
+      background: url(../img/flags32.png) no-repeat;
+  }
+  
+  .f32 .cl {
+      background-position: 0 -2020px;
+  }
+  
+  .f32 .mx {
+      background-position: 0 -5250px;
+  }
+  
+  .f32 .pe {
+      background-position: 0 -5725px;
+  }

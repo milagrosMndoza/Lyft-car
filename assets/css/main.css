@@ -1,0 +1,60 @@
+body {
+    background: url(../img/DRIVING.webp)center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo {
+    width: auto;
+    max-width: 250px;
+    height: auto;
+    max-height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+section {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.btn-1,
+.btn-2 {
+    color: #fff;
+    background-color: transparent;
+    
+    font-size: 18px;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.btn-1 {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-2 {
+    background: linear-gradient(to right, rgba(165, 66, 250, 0.3) 25%, rgba(189, 13, 242, 0.4) 40%, rgba(242, 11, 242, 0.72) 70%, rgb(242, 11, 242) 100%);
+    border-color: transparent;
+}
+
+.btn-1:focus,
+.btn-1.focus,
+.btn-2:focus,
+.btn-2.focus {
+    color: rgb(242, 11, 242);
+    background-color: rgb(242, 11, 242);
+    border-color: rgba(242, 11, 242, 0.72);
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    color: #fff;
+    background-color: #EA0B8C;
+    border-color: #d022ae;
+}

@@ -1,0 +1,19 @@
+small {
+  color: #99989D;
+}
+
+footer {
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}
+
+footer button {
+	width: 100%;
+	padding: 10px; 
+	border:none;
+	border-radius: 5px;
+	color: #fff;
+}

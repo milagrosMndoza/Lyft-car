@@ -1,0 +1,53 @@
+.title {
+	margin-left:20px;
+}
+
+hr {
+	width: 100%;
+}
+
+section {
+	margin: 0 auto;
+
+}
+/* Getting rid of vertical lines on input boxes*/
+#commentName {
+	border-right: none;
+}
+
+#commentLastName {
+	border-left: none;
+}
+/* Last Name Span Erased */
+.spanLastName {
+    padding: 0;
+    background-color: #fff;
+    border-right: none;
+	border-left: none;
+}
+
+
+/* Button Next */
+footer .btn-login {
+	width: 100%;
+	padding: 10px; 
+	border:none;
+	border-radius: 5px;
+	background-color: #FC1EBF;
+	color: #fff;
+}
+
+section a {
+	text-decoration: none;
+	font-size: 30px;
+}
+
+footer {
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Página del Phone</title>
+	<!--Alertify js-->
+	<script src="assets/js/alertify.min.js"></script>
+	<!-- Alertify Styles -->
+	<link href="assets/css/alertify.core.css" rel="stylesheet">
+	<link href="assets/css/alertify.default.css" rel="stylesheet">
+
+  <!-- CSS Enlaces -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/flags32.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/phone.css">
+</head>
+<body>
+	<div class="container">
+		<div id="app-content">
+			<header>
+				<div class="row">
+					<div class="col-md-1 col-sm-1 col-xs-1">
+						<a href="index.html" id="goBack"><i class="fa fa-angle-left fa-3x" style="margin-top: 18px" aria-hidden="true"></i></a>
+					</div>
+			        <div class="col-md-9 col-sm-9 col-xs-9 text-center title">
+				        <h1>Sign up</h1>
+				        <p>Join now for free ride credit</p>
+	       			</div>
+	        		<hr>
+  				</div>
+			</header>
+			<section>
+				<div class="container">
+					<div class="row text-center">
+					  <div class="col-md-12">				    
+                        <div class="input-group form-group" id="input-phone-group">
+                            <div class="input-group-btn">
+                                <a href="index-country.html" type="button" class="btn btn-default flag-btn">
+	                                <div class="">
+	                                	<ul class="list-unstyled f32 input-group-btn ">
+		                                	<li class="flag bs" id="flag"></li>
+		                                	<span class="caret"></span>
+	                                	</ul>
+	                                </div>
+                                </a>   
+                            </div>
+                            <span class="input-group-addon" id="dialCode">+51</span>
+                            <input name="" type="text" class="form-control input-phone" id="inputPhoneNumber" placeholder="">
+                        </div>
+                        <span class="help-block" id="commentPhonePrompt"></span>
+					    <br>
+					    <p>We'll send a text to verify your phone</p>
+					  </div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="container">
+					<div class="row">
+				        <div class="col-md-12 text-center">
+				        <!-- Trigger the modal with a button -->
+							<a id="next"><button type="button" class="btnNext" id="btnNext" data-target="#myModal">Next</button></a>
+							<!-- Modal -->
+						  	<div class="modal fade" id="myModal" role="dialog">
+						    	<div class="modal-dialog">
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title"></h4>
+										</div>
+										<div class="modal-body">
+											<p></p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn-lg close" id="close" data-dismiss="modal">OK</button>
+										</div>
+									</div>
+						    	</div>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/phone.js"></script>
+	<script type="text/javascript" src="assets/js/signup.js"></script>
+
+</body>
+</html>
